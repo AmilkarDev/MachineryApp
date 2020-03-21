@@ -1,0 +1,10 @@
+C:\Users\Amilkar\source\repos\MachineryAPP\MachineryAPP\bin\Debug\netcoreapp2.2\MachineryAPP.deps.json
+C:\Users\Amilkar\source\repos\MachineryAPP\MachineryAPP\bin\Debug\netcoreapp2.2\MachineryAPP.runtimeconfig.json
+C:\Users\Amilkar\source\repos\MachineryAPP\MachineryAPP\bin\Debug\netcoreapp2.2\MachineryAPP.runtimeconfig.dev.json
+C:\Users\Amilkar\source\repos\MachineryAPP\MachineryAPP\bin\Debug\netcoreapp2.2\MachineryAPP.dll
+C:\Users\Amilkar\source\repos\MachineryAPP\MachineryAPP\bin\Debug\netcoreapp2.2\MachineryAPP.pdb
+C:\Users\Amilkar\source\repos\MachineryAPP\MachineryAPP\obj\Debug\netcoreapp2.2\MachineryAPP.csproj.CoreCompileInputs.cache
+C:\Users\Amilkar\source\repos\MachineryAPP\MachineryAPP\obj\Debug\netcoreapp2.2\MachineryAPP.AssemblyInfoInputs.cache
+C:\Users\Amilkar\source\repos\MachineryAPP\MachineryAPP\obj\Debug\netcoreapp2.2\MachineryAPP.AssemblyInfo.cs
+C:\Users\Amilkar\source\repos\MachineryAPP\MachineryAPP\obj\Debug\netcoreapp2.2\MachineryAPP.dll
+C:\Users\Amilkar\source\repos\MachineryAPP\MachineryAPP\obj\Debug\netcoreapp2.2\MachineryAPP.pdb

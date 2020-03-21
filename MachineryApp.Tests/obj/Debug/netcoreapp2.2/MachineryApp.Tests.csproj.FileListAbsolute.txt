@@ -1,0 +1,17 @@
+C:\Users\Amilkar\source\repos\MachineryAPP\MachineryApp.Tests\bin\Debug\netcoreapp2.2\NUnit3.TestAdapter.dll
+C:\Users\Amilkar\source\repos\MachineryAPP\MachineryApp.Tests\bin\Debug\netcoreapp2.2\NUnit3.TestAdapter.pdb
+C:\Users\Amilkar\source\repos\MachineryAPP\MachineryApp.Tests\bin\Debug\netcoreapp2.2\nunit.engine.netstandard.dll
+C:\Users\Amilkar\source\repos\MachineryAPP\MachineryApp.Tests\bin\Debug\netcoreapp2.2\MachineryApp.Tests.deps.json
+C:\Users\Amilkar\source\repos\MachineryAPP\MachineryApp.Tests\bin\Debug\netcoreapp2.2\MachineryApp.Tests.runtimeconfig.json
+C:\Users\Amilkar\source\repos\MachineryAPP\MachineryApp.Tests\bin\Debug\netcoreapp2.2\MachineryApp.Tests.runtimeconfig.dev.json
+C:\Users\Amilkar\source\repos\MachineryAPP\MachineryApp.Tests\bin\Debug\netcoreapp2.2\MachineryApp.Tests.dll
+C:\Users\Amilkar\source\repos\MachineryAPP\MachineryApp.Tests\bin\Debug\netcoreapp2.2\MachineryApp.Tests.pdb
+C:\Users\Amilkar\source\repos\MachineryAPP\MachineryApp.Tests\bin\Debug\netcoreapp2.2\MachineryAPP.dll
+C:\Users\Amilkar\source\repos\MachineryAPP\MachineryApp.Tests\bin\Debug\netcoreapp2.2\MachineryAPP.pdb
+C:\Users\Amilkar\source\repos\MachineryAPP\MachineryApp.Tests\obj\Debug\netcoreapp2.2\MachineryApp.Tests.csprojAssemblyReference.cache
+C:\Users\Amilkar\source\repos\MachineryAPP\MachineryApp.Tests\obj\Debug\netcoreapp2.2\MachineryApp.Tests.csproj.CoreCompileInputs.cache
+C:\Users\Amilkar\source\repos\MachineryAPP\MachineryApp.Tests\obj\Debug\netcoreapp2.2\MachineryApp.Tests.AssemblyInfoInputs.cache
+C:\Users\Amilkar\source\repos\MachineryAPP\MachineryApp.Tests\obj\Debug\netcoreapp2.2\MachineryApp.Tests.AssemblyInfo.cs
+C:\Users\Amilkar\source\repos\MachineryAPP\MachineryApp.Tests\obj\Debug\netcoreapp2.2\MachineryApp.Tests.csproj.CopyComplete
+C:\Users\Amilkar\source\repos\MachineryAPP\MachineryApp.Tests\obj\Debug\netcoreapp2.2\MachineryApp.Tests.dll
+C:\Users\Amilkar\source\repos\MachineryAPP\MachineryApp.Tests\obj\Debug\netcoreapp2.2\MachineryApp.Tests.pdb
