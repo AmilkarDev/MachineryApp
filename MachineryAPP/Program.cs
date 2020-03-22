@@ -2,6 +2,7 @@
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Transactions;
+using Autofac;
 using static System.Console;
 
 namespace MachineryAPP
@@ -10,24 +11,14 @@ namespace MachineryAPP
     {
         static void Main(string[] args)
         {
-            string[] order = null;
-            OrderManager orderManager = new OrderManager();
-            WriteLine("Welcome to the Machinery App");
-            Write("Enter Command: \n");
-            string command = "";
+            var container = ContainerConfig.Configure();
 
-            while(command != "exit")
+            using (var scope = container.BeginLifetimeScope())
             {
-                command = ReadLine();
-                orderManager.TreatOrder(command);
-               
+                var app = scope.Resolve<IApplication>();
+                app.Run();
             }
 
-           
-
-            //WriteLine("Your input: {0}", a);
-            ReadKey();
-            //Console.ReadLine();
         }
     }
 }

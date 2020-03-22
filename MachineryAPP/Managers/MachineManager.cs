@@ -33,7 +33,7 @@ namespace MachineryAPP
         }
 
         public bool SetTemperature(int temperature,string machineId)
-        {
+         {
             Machine machine = Machines.FirstOrDefault(x => x.MachineId == machineId);
             if (machine != null)
             {
