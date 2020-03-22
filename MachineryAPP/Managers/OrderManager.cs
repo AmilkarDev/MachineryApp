@@ -6,12 +6,13 @@ namespace MachineryAPP
 {
     public class OrderManager : IOrderManager
     {
-        public MachineManager machineManager = new MachineManager();
-
-        public OrderManager()
+        //public MachineManager machineManager = new MachineManager();
+        private IMachineManager machineManager;
+        public OrderManager(IMachineManager machineMgr)
         {
+            machineManager = machineMgr;
         }
-
+        public OrderManager() { }
         public void TreatOrder(string input)
         {
             string[] order = null;
@@ -31,7 +32,8 @@ namespace MachineryAPP
                     case 3:
                     {
                         var inputOrder = GetInputOrder(order);
-                        TreatInputOrder(inputOrder);
+                        string final = TreatInputOrder(inputOrder);
+                            Console.WriteLine("{0}", final);
                         WriteLine();
                         WriteLine("enter a new command \n");
                         break;
@@ -39,8 +41,13 @@ namespace MachineryAPP
                     case 2:
                     {
                         var outputOrder = GetOutputOrder(order);
-                        TreatOutputOrder(outputOrder);
-                        WriteLine();
+                        int? final = TreatOutputOrder(outputOrder);
+                            
+                            if (final!=null)
+                            Console.WriteLine("{0}", final);
+                            else
+                            Console.WriteLine("An error occured");
+                            WriteLine();
                         WriteLine("enter a new command \n");
                         break;
                     }
@@ -81,10 +88,10 @@ namespace MachineryAPP
         }
 
         //Treatment of the order depending on the order Type : Create / Add/Temperature
-        public void TreatInputOrder(InputOrder newOrder)
+        public string TreatInputOrder(InputOrder newOrder)
         {
 
-
+            string final;
             //Treating the order depending on the command type
             switch (newOrder.Command.ToLower())
             {
@@ -96,9 +103,10 @@ namespace MachineryAPP
                         MachineId = newOrder.Param2
                     };
                     bool result = machineManager.CreateMachine(machine);
-                    if (!result)
-                        Console.WriteLine(
-                            "A machine with the same Identifier already exists ! Please Consider using a different Identifier");
+                        if (result==false)
+                            final = "A machine with the same Identifier already exists ! Please Consider using a different Identifier";
+                        else
+                            final = "success";
                     break;
                 }
 
@@ -110,12 +118,14 @@ namespace MachineryAPP
                         int units = Convert.ToInt32(newOrder.Param2);
                         bool val =machineManager.AddUnits(units, machineId);
                         if(!val)
-                                Console.WriteLine("Machine not found , please check the machine identifier used");
+                                final="Machine not found , please check the machine identifier used";
+                        else
+                            final = "success";
                     }
                     catch (Exception ex)
                     {
-                        Console.WriteLine(
-                            "please check the add operations parameters ! The last parameter should be integer");
+                        
+                           final= "please check the add operations parameters ! The last parameter should be integer";
                     }
 
                     break;
@@ -129,70 +139,62 @@ namespace MachineryAPP
                     {
                         int temperature = Convert.ToInt32(newOrder.Param2);
                         bool val = machineManager.SetTemperature(temperature, machineId);
-                        if(!val)
-                             Console.WriteLine("Machine not found , please check the machine identifier used");
+                            if (!val)
+                                final = "Machine not found , please check the machine identifier used";
+                            else
+                                final = "success";
                     }
                     catch (Exception ex)
                     {
-                        Console.WriteLine(
-                            "please check the add operations parameters ! The last parameter should be integer");
+                        
+                           final= "please check the add operations parameters ! The last parameter should be integer";
                     }
                     break;
                 }
                 default:
                 {
-                    Console.WriteLine(
-                        "please check the  operations parameters ! Order not recognized");
+                    final= "please check the  operations parameters ! Order not recognized";
                     break;
                 }
             }
+            return final;
         }
     
     //Treatment of the order depending on the order Type : Total / Average /Temperature ...
 
-    public void TreatOutputOrder(OutputOrder newOrder)
+    public int? TreatOutputOrder(OutputOrder newOrder)
     {
+        int? final;
         switch (newOrder.Command)
         {
             case "temperature":
             {
                 int? temp = machineManager.GetTemperature(newOrder.MachineId);
 
-                if (temp != null)
-                    WriteLine("temperature is {0}", temp);
-                else
-                    WriteLine("Machine not found ! please verify the machine Identifier");
+                        final = temp;
                 break;
 
             }
             case "total":
             {
                 int? total = machineManager.GetTotal(newOrder.MachineId);
-
-                if (total != null)
-                    WriteLine("total is {0}", total);
-                else
-                    WriteLine("Machine not found ! please verify the machine Identifier");
+                        final = total;
+                
                 break;
             }
             case "average":
             {
                 int? avg = machineManager.GetAverage(newOrder.MachineId);
-
-                if (avg != null)
-                    WriteLine("average is {0}", avg);
-                else
-                    WriteLine("Machine not found ! please verify the machine Identifier");
+                        final = avg;   
                 break;
             }
             default:
             {
-                Console.WriteLine(
-                    "please check the  operations parameters ! Order not recognized");
+                final=null;
                 break;
             }
         }
-
+            return final;
 
     }
 }
